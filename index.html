@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdulsamad Taiwo | Software Engineering Student</title>
+  <meta name="description" content="Personal academic portfolio of Abdulsamad Taiwo – Software Engineering student at MIVA Open University, aspiring backend developer." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">AT<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-hamburger" id="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero section container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Hello, World 👋</span>
+
+          <h1 class="hero-name">
+            Abdulsamad<br>
+            <span class="highlight">Taiwo</span>
+          </h1>
+
+          <p class="hero-role">
+            Software Engineering Student &amp;
+            <span id="typewriter"></span><span class="cursor"></span>
+          </p>
+
+          <p class="hero-bio">
+            A passionate software engineering student at MIVA Open University,
+            building scalable backend systems and exploring the deep layers of
+            modern software architecture. Always learning, always building.
+          </p>
+
+          <div class="hero-actions">
+            <a href="projects.html" class="btn btn-primary" id="view-projects-btn">
+              View Projects &rarr;
+            </a>
+            <a href="contact.html" class="btn btn-outline" id="contact-btn">
+              Contact Me
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <span class="hero-stat-num">3+</span>
+              <span class="hero-stat-label">Projects</span>
+            </div>
+            <div>
+              <span class="hero-stat-num">4</span>
+              <span class="hero-stat-label">Languages</span>
+            </div>
+            <div>
+              <span class="hero-stat-num">100%</span>
+              <span class="hero-stat-label">Committed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="hero-photo-ring animate-float">
+            <img src="assets/images/profile.jpg" alt="Abdulsamad Taiwo" id="hero-photo" />
+            <div class="ring-inner"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS PREVIEW ===== -->
+    <section class="skills-preview">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:32px;">
+          <div class="tag">Tech Stack</div>
+          <h2 class="section-title" style="margin-top:16px;">
+            Tools I Work <span>With</span>
+          </h2>
+        </div>
+        <div class="skills-scroll">
+          <div class="skill-badge fade-in-on-scroll">
+            <span class="icon">🐹</span> Golang
+          </div>
+          <div class="skill-badge fade-in-on-scroll">
+            <span class="icon">💜</span> C#
+          </div>
+          <div class="skill-badge fade-in-on-scroll">
+            <span class="icon">🌐</span> HTML / CSS
+          </div>
+          <div class="skill-badge fade-in-on-scroll">
+            <span class="icon">🐍</span> Python
+          </div>
+          <div class="skill-badge fade-in-on-scroll">
+            <span class="icon">🗄️</span> Backend Dev
+          </div>
+          <div class="skill-badge fade-in-on-scroll">
+            <span class="icon">⚙️</span> CLI Tools
+          </div>
+          <div class="skill-badge fade-in-on-scroll">
+            <span class="icon">🔗</span> REST APIs
+          </div>
+          <div class="skill-badge fade-in-on-scroll">
+            <span class="icon">🐙</span> Git &amp; GitHub
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUICK ABOUT ===== -->
+    <section class="section">
+      <div class="container">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+          <div class="fade-in-on-scroll">
+            <div class="tag">Who am I?</div>
+            <div class="accent-line"></div>
+            <h2 class="section-title">Aspiring <span>Backend</span> Developer</h2>
+            <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:20px; font-size:0.95rem;">
+              I'm Abdulsamad Taiwo, a Software Engineering student at MIVA Open University.
+              My passion lies in backend development — crafting APIs, building systems that scale,
+              and writing clean, efficient code. I work primarily with <strong style="color:var(--text-primary)">Golang</strong> and <strong style="color:var(--text-primary)">C#</strong>,
+              and I enjoy solving real-world problems with technology.
+            </p>
+            <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:28px; font-size:0.95rem;">
+              When I'm not coding, you'll find me watching movies, reading, or on the football field.
+            </p>
+            <a href="about.html" class="btn btn-outline" id="learn-more-btn">Learn More About Me &rarr;</a>
+          </div>
+
+          <div class="fade-in-on-scroll" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <!-- Mini cards -->
+            <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:24px; text-align:center; transition:all 0.3s ease;">
+              <div style="font-size:2rem; margin-bottom:10px;">🎓</div>
+              <div style="font-weight:700; font-size:0.9rem;">MIVA Open University</div>
+              <div style="color:var(--text-muted); font-size:0.8rem; margin-top:4px;">Software Engineering</div>
+            </div>
+            <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:24px; text-align:center; transition:all 0.3s ease;">
+              <div style="font-size:2rem; margin-bottom:10px;">🚀</div>
+              <div style="font-weight:700; font-size:0.9rem;">Backend Focus</div>
+              <div style="color:var(--text-muted); font-size:0.8rem; margin-top:4px;">Scalable Systems</div>
+            </div>
+            <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:24px; text-align:center; transition:all 0.3s ease;">
+              <div style="font-size:2rem; margin-bottom:10px;">🐹</div>
+              <div style="font-weight:700; font-size:0.9rem;">Golang</div>
+              <div style="color:var(--text-muted); font-size:0.8rem; margin-top:4px;">Primary Language</div>
+            </div>
+            <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:24px; text-align:center; transition:all 0.3s ease;">
+              <div style="font-size:2rem; margin-bottom:10px;">💡</div>
+              <div style="font-weight:700; font-size:0.9rem;">Always Learning</div>
+              <div style="color:var(--text-muted); font-size:0.8rem; margin-top:4px;">Growth Mindset</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED PROJECTS PREVIEW ===== -->
+    <section class="section" style="background:var(--bg-secondary); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:48px;" class="fade-in-on-scroll">
+          <div class="tag">Portfolio</div>
+          <div class="accent-line" style="margin:16px auto 0;"></div>
+          <h2 class="section-title">Featured <span>Projects</span></h2>
+          <p class="section-subtitle">A glimpse of what I've been building</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:24px;">
+          <a href="https://dlnz-store.vercel.app" target="_blank" rel="noopener" class="project-card fade-in-on-scroll" id="featured-dlnz">
+            <img src="assets/images/dlnz-store.png" alt="DLNZ Store" class="project-img" />
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">E-Commerce</span>
+                <span class="tag purple">Web</span>
+              </div>
+              <h3 class="project-title">DLNZ Store</h3>
+              <p class="project-desc">A full-featured clothing brand e-commerce website with product listings, shopping cart, and checkout flow.</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/abdulsamadtaiwo648-dotcom/TowerSystem" target="_blank" rel="noopener" class="project-card fade-in-on-scroll" id="featured-tower">
+            <img src="assets/images/tower-system.png" alt="Tower System CLI" class="project-img" />
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">CLI</span>
+                <span class="tag purple">Go / C#</span>
+              </div>
+              <h3 class="project-title">CLI Tower Management</h3>
+              <p class="project-desc">A command-line tower management system with CRUD operations, structured data handling, and efficient algorithms.</p>
+            </div>
+          </a>
+
+          <a href="#" class="project-card fade-in-on-scroll" id="featured-ascii">
+            <img src="assets/images/ascii-art.png" alt="ASCII Art Web" class="project-img" />
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Web App</span>
+                <span class="tag purple">Python</span>
+              </div>
+              <h3 class="project-title">ASCII Art Web</h3>
+              <p class="project-desc">A web-based ASCII art generator that converts text and images into stylised ASCII representations.</p>
+            </div>
+          </a>
+        </div>
+
+        <div style="text-align:center; margin-top:40px;">
+          <a href="projects.html" class="btn btn-outline" id="all-projects-btn">View All Projects &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MULTIMEDIA SECTION ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="fade-in-on-scroll" style="text-align:center; margin-bottom:40px;">
+          <div class="tag">Media</div>
+          <div class="accent-line" style="margin:16px auto 0;"></div>
+          <h2 class="section-title">Coder's <span>Vibes</span></h2>
+          <p class="section-subtitle">The soundtrack to my coding sessions</p>
+        </div>
+        <div class="fade-in-on-scroll" style="max-width:600px; margin:0 auto; background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:32px; text-align:center;">
+          <div style="font-size:3rem; margin-bottom:16px;">🎵</div>
+          <p style="color:var(--text-secondary); margin-bottom:20px; font-size:0.9rem;">
+            Music that keeps me in the zone while building great software.
+          </p>
+          <audio controls style="width:100%; accent-color:var(--accent);" id="coder-audio">
+            <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; font-style:italic;">
+            🎧 Ambient / Lo-fi coding playlist
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">AT<span>.</span></div>
+      <p class="footer-text">Software Engineering Student @ MIVA Open University</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="planner.html">Planner</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 <span>Abdulsamad Taiwo</span>. COS 106 Term Project.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

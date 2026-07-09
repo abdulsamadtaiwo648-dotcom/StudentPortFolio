@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Planner | Abdulsamad Taiwo</title>
+  <meta name="description" content="Interactive academic task planner – add, complete, and delete study tasks." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">AT<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html" class="active">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-hamburger" id="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="tag page-hero-tag">Organisation</span>
+        <h1>Academic <span style="color:var(--accent)">Planner</span></h1>
+        <p>Stay on top of your study schedule. Add tasks, track progress, and never miss a deadline.</p>
+      </div>
+    </section>
+
+    <!-- ===== PLANNER ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="planner-layout">
+
+          <!-- LEFT: Add Task Form -->
+          <div class="planner-form-card fade-in-on-scroll">
+            <div class="card-title">
+              <div class="dot"></div>
+              Add New Task
+            </div>
+
+            <form id="taskForm" novalidate>
+              <div class="form-group">
+                <label for="taskTitle">Task Title</label>
+                <input
+                  type="text"
+                  id="taskTitle"
+                  placeholder="e.g. Study Data Structures"
+                  maxlength="80"
+                  autocomplete="off"
+                />
+                <span class="form-error" id="titleError">Please enter a task title.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="taskDue">Due Date</label>
+                <input type="date" id="taskDue" />
+                <span class="form-error" id="dueError">Please select a due date.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="taskPriority">Priority</label>
+                <select id="taskPriority">
+                  <option value="high">🔴 High</option>
+                  <option value="medium" selected>🟡 Medium</option>
+                  <option value="low">🟢 Low</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="taskNote">Notes (optional)</label>
+                <textarea
+                  id="taskNote"
+                  placeholder="Any extra details about this task..."
+                  rows="3"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-add-task" id="addTaskBtn">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+                Add Task
+              </button>
+            </form>
+
+            <!-- Progress ring visual -->
+            <div style="margin-top:24px; padding:16px; background:var(--bg-secondary); border-radius:10px; border:1px solid var(--border); text-align:center;">
+              <div style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px;">Completion Rate</div>
+              <div id="progressBar" style="height:6px; background:var(--bg-card); border-radius:100px; overflow:hidden;">
+                <div id="progressFill" style="height:100%; width:0%; background:linear-gradient(90deg,var(--accent),var(--accent-2)); border-radius:100px; transition:width 0.5s ease;"></div>
+              </div>
+              <div id="progressText" style="margin-top:8px; font-size:0.85rem; color:var(--text-secondary);">0 of 0 tasks completed</div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Task List -->
+          <div class="planner-list-card fade-in-on-scroll">
+
+            <!-- Stats row -->
+            <div class="planner-stats">
+              <div class="stat-mini">
+                <span class="stat-mini-num" id="statTotal">0</span>
+                <div class="stat-mini-label">Total</div>
+              </div>
+              <div class="stat-mini">
+                <span class="stat-mini-num" id="statPending" style="color:var(--warning);">0</span>
+                <div class="stat-mini-label">Pending</div>
+              </div>
+              <div class="stat-mini">
+                <span class="stat-mini-num" id="statDone" style="color:var(--success);">0</span>
+                <div class="stat-mini-label">Done</div>
+              </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="task-filters" id="taskFilters">
+              <button class="filter-btn active" data-filter="all" id="taskFilter-all">All</button>
+              <button class="filter-btn" data-filter="pending" id="taskFilter-pending">Pending</button>
+              <button class="filter-btn" data-filter="completed" id="taskFilter-completed">Completed</button>
+              <button class="filter-btn" data-filter="high" id="taskFilter-high">🔴 High Priority</button>
+            </div>
+
+            <!-- Task List Container -->
+            <div class="task-list" id="taskList">
+              <!-- Tasks rendered by JS -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="task-empty" id="taskEmpty">
+              <div class="icon">📋</div>
+              <p>No tasks yet. Add your first task to get started!</p>
+            </div>
+
+            <!-- Clear All Button -->
+            <div style="margin-top:20px; text-align:right; display:none;" id="clearAllWrapper">
+              <button id="clearAllBtn" style="background:rgba(239,68,68,0.1); color:#f87171; border:1px solid rgba(239,68,68,0.3); padding:8px 16px; border-radius:8px; font-size:0.82rem; font-weight:600; cursor:pointer; transition:all 0.3s ease;">
+                🗑️ Clear All Tasks
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">AT<span>.</span></div>
+      <p class="footer-text">Software Engineering Student @ MIVA Open University</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="planner.html">Planner</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 <span>Abdulsamad Taiwo</span>. COS 106 Term Project.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>

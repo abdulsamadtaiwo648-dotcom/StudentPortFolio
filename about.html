@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | Abdulsamad Taiwo</title>
+  <meta name="description" content="Learn about Abdulsamad Taiwo's educational background, career aspirations, technical skills, and hobbies." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">AT<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-hamburger" id="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="tag page-hero-tag">About Me</span>
+        <h1>The Person <span style="color:var(--accent)">Behind the Code</span></h1>
+        <p>Passionate about building systems that matter. Here's a little about my journey.</p>
+      </div>
+    </section>
+
+    <!-- ===== MAIN ABOUT CONTENT ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- LEFT: Photo + Quick Info -->
+          <div class="about-photo-card fade-in-on-scroll">
+            <img src="assets/images/profile.jpg" alt="Abdulsamad Taiwo" id="about-photo" />
+            <div class="about-photo-overlay">
+              <div class="about-info-row">
+                <span class="label">Full Name</span>
+                <span class="value">Abdulsamad Taiwo</span>
+              </div>
+              <div class="about-info-row">
+                <span class="label">University</span>
+                <span class="value">MIVA Open University</span>
+              </div>
+              <div class="about-info-row">
+                <span class="label">Programme</span>
+                <span class="value">Software Engineering</span>
+              </div>
+              <div class="about-info-row">
+                <span class="label">Focus Area</span>
+                <span class="value">Backend Development</span>
+              </div>
+              <div class="about-info-row">
+                <span class="label">Status</span>
+                <span class="value" style="color:var(--success)">● Currently Enrolled</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Content -->
+          <div>
+
+            <!-- Career Aspirations -->
+            <div class="fade-in-on-scroll" style="margin-bottom:48px;">
+              <div class="tag">Career Aspirations</div>
+              <div class="accent-line"></div>
+              <h2 class="section-title" style="font-size:1.6rem; margin-bottom:16px;">
+                My <span>Vision</span>
+              </h2>
+              <p style="color:var(--text-secondary); line-height:1.85; margin-bottom:14px; font-size:0.95rem;">
+                My career goal is to become a skilled <strong style="color:var(--text-primary)">Backend Engineer</strong>,
+                building robust, scalable server-side systems and APIs that power modern applications.
+                I'm drawn to the discipline of designing systems that handle real-world traffic, ensuring
+                reliability, efficiency, and clean architecture.
+              </p>
+              <p style="color:var(--text-secondary); line-height:1.85; font-size:0.95rem;">
+                I envision myself working in a product-driven tech environment — contributing to
+                distributed systems, microservices, and data pipelines using languages like
+                <strong style="color:var(--accent)">Golang</strong> and <strong style="color:var(--accent)">C#</strong>.
+                Long-term, I aspire to become a software architect who designs solutions at scale.
+              </p>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="fade-in-on-scroll" style="margin-bottom:48px;">
+              <div class="tag">Technical Skills</div>
+              <div class="accent-line"></div>
+              <h2 class="section-title" style="font-size:1.6rem; margin-bottom:24px;">
+                What I <span>Know</span>
+              </h2>
+              <div class="skills-list" id="skillsContainer">
+                <!-- Rendered by JS for animation -->
+              </div>
+            </div>
+
+            <!-- Education -->
+            <div class="fade-in-on-scroll" style="margin-bottom:48px;">
+              <div class="tag">Education</div>
+              <div class="accent-line"></div>
+              <h2 class="section-title" style="font-size:1.6rem; margin-bottom:16px;">
+                Academic <span>Background</span>
+              </h2>
+              <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:12px; overflow:hidden;">
+                <table class="edu-table">
+                  <thead>
+                    <tr>
+                      <th>Institution</th>
+                      <th>Programme</th>
+                      <th>Period</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>MIVA Open University</td>
+                      <td>B.Sc. Software Engineering</td>
+                      <td>2023 – Present</td>
+                      <td><span class="badge badge-current">Current</span></td>
+                    </tr>
+                    <tr>
+                      <td>Secondary School</td>
+                      <td>Science (WAEC / NECO)</td>
+                      <td>2017 – 2023</td>
+                      <td><span class="badge" style="background:rgba(99,102,241,0.15); color:#a5b4fc; border:1px solid rgba(99,102,241,0.3);">Completed</span></td>
+                    </tr>
+                    <tr>
+                      <td>Primary School</td>
+                      <td>Primary Education (FSLC)</td>
+                      <td>Before 2017</td>
+                      <td><span class="badge" style="background:rgba(99,102,241,0.15); color:#a5b4fc; border:1px solid rgba(99,102,241,0.3);">Completed</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Hobbies -->
+            <div class="fade-in-on-scroll">
+              <div class="tag">Personal Interests</div>
+              <div class="accent-line"></div>
+              <h2 class="section-title" style="font-size:1.6rem; margin-bottom:20px;">
+                Hobbies &amp; <span>Interests</span>
+              </h2>
+              <div class="hobbies-grid">
+                <div class="hobby-card">
+                  <div class="icon">🎬</div>
+                  <div class="name">Movies</div>
+                </div>
+                <div class="hobby-card">
+                  <div class="icon">📚</div>
+                  <div class="name">Reading</div>
+                </div>
+                <div class="hobby-card">
+                  <div class="icon">⚽</div>
+                  <div class="name">Football</div>
+                </div>
+                <div class="hobby-card">
+                  <div class="icon">💻</div>
+                  <div class="name">Coding</div>
+                </div>
+                <div class="hobby-card">
+                  <div class="icon">🎵</div>
+                  <div class="name">Music</div>
+                </div>
+                <div class="hobby-card">
+                  <div class="icon">🌍</div>
+                  <div class="name">Tech Trends</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">AT<span>.</span></div>
+      <p class="footer-text">Software Engineering Student @ MIVA Open University</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="planner.html">Planner</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 <span>Abdulsamad Taiwo</span>. COS 106 Term Project.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Skills data array – rendered dynamically
+    const skills = [
+      { name: 'Golang',   pct: 80 },
+      { name: 'C#',       pct: 75 },
+      { name: 'HTML/CSS', pct: 85 },
+      { name: 'Python',   pct: 70 },
+      { name: 'Git & GitHub', pct: 78 },
+      { name: 'Backend APIs', pct: 72 },
+    ];
+
+    function renderSkills() {
+      const container = document.getElementById('skillsContainer');
+      skills.forEach(function(skill) {
+        const item = document.createElement('div');
+        item.className = 'skill-item';
+        item.innerHTML = `
+          <div class="skill-header">
+            <span class="name">${skill.name}</span>
+            <span class="pct">${skill.pct}%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="${skill.pct}"></div>
+          </div>
+        `;
+        container.appendChild(item);
+      });
+      animateBars();
+    }
+
+    function animateBars() {
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const fills = entry.target.querySelectorAll('.skill-fill');
+            fills.forEach(function(fill) {
+              setTimeout(function() {
+                fill.style.width = fill.dataset.width + '%';
+              }, 200);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      const container = document.getElementById('skillsContainer');
+      if (container) observer.observe(container);
+    }
+
+    renderSkills();
+  </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Abdulsamad Taiwo</title>
+  <meta name="description" content="Portfolio projects by Abdulsamad Taiwo – DLNZ Store, CLI Tower Management System, and ASCII Art Web." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">AT<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-hamburger" id="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="tag page-hero-tag">Portfolio</span>
+        <h1>My <span style="color:var(--accent)">Projects</span></h1>
+        <p>Real-world applications and experiments I've built while learning and growing as a developer.</p>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Project Filter Buttons -->
+        <div class="task-filters" id="projectFilters" style="margin-bottom:40px; justify-content:center;">
+          <button class="filter-btn active" data-filter="all" id="filter-all">All Projects</button>
+          <button class="filter-btn" data-filter="web" id="filter-web">Web</button>
+          <button class="filter-btn" data-filter="cli" id="filter-cli">CLI / Systems</button>
+          <button class="filter-btn" data-filter="tool" id="filter-tool">Tools</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project 1: DLNZ Store -->
+          <article class="project-card fade-in-on-scroll" data-category="web" id="project-dlnz">
+            <img
+              src="assets/images/dlnz-store.png"
+              alt="DLNZ Store – Clothing Brand E-Commerce Website"
+              class="project-img"
+            />
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">E-Commerce</span>
+                <span class="tag purple">Web</span>
+                <span class="tag">Fashion</span>
+              </div>
+              <h2 class="project-title">DLNZ Store</h2>
+              <p class="project-desc">
+                A full-featured clothing brand e-commerce website built for the DLNZ brand.
+                Features product catalogue browsing, shopping cart functionality, responsive
+                design, and a clean, modern UI optimised for fashion retail. Deployed on Vercel
+                for fast global access.
+              </p>
+              <ul style="color:var(--text-muted); font-size:0.82rem; margin-bottom:16px; padding-left:16px; line-height:1.9;">
+                <li>Product listing with categories and filtering</li>
+                <li>Responsive mobile-friendly layout</li>
+                <li>Deployed and live on Vercel</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://dlnz-store.vercel.app" target="_blank" rel="noopener" class="project-link" id="dlnz-live-link">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Live Demo
+                </a>
+                <a href="#" class="project-link" style="color:var(--text-muted);" id="dlnz-github-link">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: CLI Tower Management System -->
+          <article class="project-card fade-in-on-scroll" data-category="cli" id="project-tower">
+            <img
+              src="assets/images/tower-system.png"
+              alt="CLI Tower Management System"
+              class="project-img"
+            />
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">CLI</span>
+                <span class="tag purple">Go / C#</span>
+                <span class="tag">Systems</span>
+              </div>
+              <h2 class="project-title">CLI Tower Management System</h2>
+              <p class="project-desc">
+                A command-line application for managing tower infrastructure data.
+                Supports full CRUD operations — create, read, update, and delete tower records —
+                using efficient data structures and clean architecture. Built to demonstrate
+                systems programming concepts.
+              </p>
+              <ul style="color:var(--text-muted); font-size:0.82rem; margin-bottom:16px; padding-left:16px; line-height:1.9;">
+                <li>Full CRUD tower data management</li>
+                <li>Structured command-line interface</li>
+                <li>Clean systems-level code architecture</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/abdulsamadtaiwo648-dotcom/TowerSystem" target="_blank" rel="noopener" class="project-link" id="tower-github-link">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                  GitHub Repo
+                </a>
+                <span class="project-link" style="color:var(--text-muted); cursor:default;">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3" />
+                  </svg>
+                  CLI App
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: ASCII Art Web -->
+          <article class="project-card fade-in-on-scroll" data-category="tool" id="project-ascii">
+            <img
+              src="assets/images/ascii-art.png"
+              alt="ASCII Art Web Application"
+              class="project-img"
+            />
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Web App</span>
+                <span class="tag purple">Python</span>
+                <span class="tag">Tool</span>
+              </div>
+              <h2 class="project-title">ASCII Art Web</h2>
+              <p class="project-desc">
+                A web-based ASCII art generator that converts plain text into stylised
+                ASCII art representations using various fonts and styles. Built with Python
+                on the backend and a clean web frontend, it demonstrates creative use of
+                character mapping and string manipulation algorithms.
+              </p>
+              <ul style="color:var(--text-muted); font-size:0.82rem; margin-bottom:16px; padding-left:16px; line-height:1.9;">
+                <li>Text-to-ASCII conversion engine</li>
+                <li>Multiple font/style options</li>
+                <li>Web-based UI with copy-to-clipboard</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="project-link" id="ascii-demo-link">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Try Demo
+                </a>
+                <a href="#" class="project-link" style="color:var(--text-muted);" id="ascii-github-link">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Coming Soon -->
+        <div class="fade-in-on-scroll" style="margin-top:60px; text-align:center; padding:48px; background:var(--bg-card); border:1px dashed var(--border); border-radius:16px;" id="coming-soon-card">
+          <div style="font-size:2.5rem; margin-bottom:16px;">🚀</div>
+          <h3 style="font-size:1.1rem; margin-bottom:8px; font-weight:700;">More Projects Coming Soon</h3>
+          <p style="color:var(--text-secondary); font-size:0.88rem; max-width:400px; margin:0 auto;">
+            I'm always building something new. Follow my GitHub to stay updated on upcoming projects.
+          </p>
+          <a href="https://github.com/abdulsamadtaiwo648-dotcom" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:20px;" id="github-profile-btn">
+            Follow on GitHub &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">AT<span>.</span></div>
+      <p class="footer-text">Software Engineering Student @ MIVA Open University</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="planner.html">Planner</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 <span>Abdulsamad Taiwo</span>. COS 106 Term Project.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Project filtering using arrays and functions
+    const filterBtns = document.querySelectorAll('#projectFilters .filter-btn');
+    const projectCards = document.querySelectorAll('#projectsGrid .project-card');
+
+    function filterProjects(category) {
+      projectCards.forEach(function(card) {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+          card.style.animation = 'fadeInUp 0.4s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        filterProjects(this.dataset.filter);
+      });
+    });
+  </script>
+</body>
+</html>
