@@ -11,29 +11,29 @@
    =================================================== */
 :root {
   /* Background Colours */
-  --bg-primary:    #0b0a08;
-  --bg-secondary:  #14120e;
-  --bg-card:       #1a1713;
-  --bg-card-hover: #221e18;
-  --bg-input:      #14120e;
+  --bg-primary:    #f6f3ec;
+  --bg-secondary:  #ece7dc;
+  --bg-card:       #ffffff;
+  --bg-card-hover: #f3efe6;
+  --bg-input:      #ece7dc;
 
   /* Accent Colours */
-  --accent:        #c9a24a;
-  --accent-dim:    rgba(201, 162, 74, 0.15);
-  --accent-2:      #a8864a;
-  --accent-2-dim:  rgba(168, 134, 74, 0.15);
+  --accent:        #9c3d24;
+  --accent-dim:    rgba(156, 61, 36, 0.15);
+  --accent-2:      #3d3a34;
+  --accent-2-dim:  rgba(61, 58, 52, 0.15);
   --success:       #22c55e;
   --danger:        #ef4444;
   --warning:       #f59e0b;
 
   /* Text Colours */
-  --text-primary:   #f5efe3;
-  --text-secondary: #b9b09c;
-  --text-muted:     #7d7463;
+  --text-primary:   #1a1816;
+  --text-secondary: #55514a;
+  --text-muted:     #8a8478;
 
   /* Border */
-  --border:         rgba(255,255,255,0.08);
-  --border-accent:  rgba(201, 162, 74, 0.4);
+  --border:         rgba(26,24,22,0.12);
+  --border-accent:  rgba(156, 61, 36, 0.4);
 
   /* Typography */
   --font-main:  'Inter', sans-serif;
@@ -48,8 +48,8 @@
 
   /* Shadows */
   --shadow-card:   0 4px 24px rgba(0,0,0,0.4);
-  --shadow-accent: 0 0 30px rgba(201, 162, 74, 0.2);
-  --glow:          0 0 20px rgba(201, 162, 74, 0.5);
+  --shadow-accent: 0 0 30px rgba(156, 61, 36, 0.2);
+  --glow:          0 0 20px rgba(156, 61, 36, 0.5);
 }
 
 /* ===================================================
@@ -134,7 +134,7 @@ input, textarea, select { font-family: var(--font-main); }
 .tag.purple {
   background: var(--accent-2-dim);
   color: #a5b4fc;
-  border-color: rgba(168,134,74,0.4);
+  border-color: rgba(61,58,52,0.4);
 }
 
 .btn {
@@ -152,12 +152,12 @@ input, textarea, select { font-family: var(--font-main); }
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #fff;
-  box-shadow: 0 4px 20px rgba(201,162,74,0.3);
+  box-shadow: 0 4px 20px rgba(156,61,36,0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(201,162,74,0.45);
+  box-shadow: 0 8px 30px rgba(156,61,36,0.45);
 }
 
 .btn-outline {
@@ -180,7 +180,7 @@ input, textarea, select { font-family: var(--font-main); }
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  background: rgba(8, 12, 20, 0.85);
+  background: rgba(246, 243, 236, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -285,7 +285,7 @@ input, textarea, select { font-family: var(--font-main); }
   right: -200px;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(201,162,74,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(156,61,36,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -296,7 +296,7 @@ input, textarea, select { font-family: var(--font-main); }
   left: -100px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(168,134,74,0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(61,58,52,0.07) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -401,7 +401,7 @@ input, textarea, select { font-family: var(--font-main); }
   position: absolute;
   inset: 8px;
   border-radius: 50%;
-  border: 1px solid rgba(201,162,74,0.2);
+  border: 1px solid rgba(156,61,36,0.2);
   z-index: 2;
   pointer-events: none;
 }
@@ -489,7 +489,7 @@ input, textarea, select { font-family: var(--font-main); }
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(201,162,74,0.07) 0%, transparent 70%);
+  background: radial-gradient(ellipse at 50% 0%, rgba(156,61,36,0.07) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -801,7 +801,7 @@ input, textarea, select { font-family: var(--font-main); }
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(201,162,74,0.1);
+  box-shadow: 0 0 0 3px rgba(156,61,36,0.1);
 }
 
 .form-group select { appearance: none; cursor: pointer; }
@@ -834,7 +834,7 @@ input, textarea, select { font-family: var(--font-main); }
 
 .btn-add-task:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(201,162,74,0.3);
+  box-shadow: 0 8px 24px rgba(156,61,36,0.3);
 }
 
 /* Task Filters */
@@ -1087,7 +1087,7 @@ input, textarea, select { font-family: var(--font-main); }
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(201,162,74,0.3);
+  box-shadow: 0 8px 28px rgba(156,61,36,0.3);
 }
 
 .form-success {
@@ -1215,8 +1215,8 @@ input, textarea, select { font-family: var(--font-main); }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(201,162,74,0.4); }
-  50%       { box-shadow: 0 0 0 12px rgba(201,162,74,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(156,61,36,0.4); }
+  50%       { box-shadow: 0 0 0 12px rgba(156,61,36,0); }
 }
 
 @keyframes blink {
@@ -1292,7 +1292,7 @@ input, textarea, select { font-family: var(--font-main); }
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background: rgba(8,12,20,0.97);
+    background: rgba(246,243,236,0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 24px;
@@ -1357,7 +1357,7 @@ input, textarea, select { font-family: var(--font-main); }
 h1, h2, h3, .section-title, .page-hero h1, .hero-name {
   font-family: 'Playfair Display', Georgia, serif;
   letter-spacing: 0.01em;
-  text-shadow: 0 2px 0 rgba(0,0,0,0.35), 0 10px 24px rgba(201,162,74,0.08);
+  text-shadow: 0 2px 0 rgba(0,0,0,0.35), 0 10px 24px rgba(156,61,36,0.08);
 }
 
 /* Cards: layered 3D shadow for depth */
@@ -1373,16 +1373,16 @@ h1, h2, h3, .section-title, .page-hero h1, .hero-name {
   justify-content: center;
   height: 200px;
   background:
-    radial-gradient(circle at 30% 20%, rgba(201,162,74,0.35), transparent 55%),
-    radial-gradient(circle at 80% 90%, rgba(168,134,74,0.35), transparent 55%),
-    linear-gradient(135deg, #1a1713, #14120e);
+    radial-gradient(circle at 30% 20%, rgba(156,61,36,0.35), transparent 55%),
+    radial-gradient(circle at 80% 90%, rgba(61,58,52,0.35), transparent 55%),
+    linear-gradient(135deg, #ffffff, #ece7dc);
 }
 .project-img--placeholder span {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.8rem;
   font-weight: 800;
   color: var(--text-primary);
-  text-shadow: 0 4px 0 rgba(0,0,0,0.35), 0 0 24px rgba(201,162,74,0.35);
+  text-shadow: 0 4px 0 rgba(0,0,0,0.35), 0 0 24px rgba(156,61,36,0.35);
 }
 
 /* Project cards: tilt in 3D on pointer movement */

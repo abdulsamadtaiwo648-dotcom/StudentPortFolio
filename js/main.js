@@ -150,10 +150,10 @@
     img.addEventListener('error', function () {
       // Generate a simple SVG avatar as fallback
       var svg = `<svg xmlns="http://www.w3.org/2000/svg" width="312" height="312" viewBox="0 0 312 312">
-        <rect width="312" height="312" fill="#1a1713" rx="156"/>
+        <rect width="312" height="312" fill="#ffffff" rx="156"/>
         <circle cx="156" cy="120" r="56" fill="#1a2d40"/>
         <ellipse cx="156" cy="240" rx="90" ry="60" fill="#1a2d40"/>
-        <text x="156" y="290" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" fill="#b9b09c">AT</text>
+        <text x="156" y="290" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" fill="#55514a">AT</text>
       </svg>`;
       img.src = 'data:image/svg+xml;base64,' + btoa(svg);
     });
@@ -166,7 +166,7 @@
   var cards = document.querySelectorAll('[style*="background:var(--bg-card)"]');
   cards.forEach(function (card) {
     card.addEventListener('mouseenter', function () {
-      card.style.borderColor = 'rgba(201,162,74,0.4)';
+      card.style.borderColor = 'rgba(156,61,36,0.4)';
       card.style.transform = 'translateY(-4px)';
     });
     card.addEventListener('mouseleave', function () {

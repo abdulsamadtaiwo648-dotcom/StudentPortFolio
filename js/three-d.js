@@ -100,7 +100,7 @@ function initHeroGlobe(hero) {
       var p1 = proj[edges[e][0]], p2 = proj[edges[e][1]];
       var depth = (p1.z + p2.z) / 2;
       var alpha = 0.06 + ((depth + 1) / 2) * 0.22;
-      ctx.strokeStyle = 'rgba(201,162,74,' + alpha.toFixed(3) + ')';
+      ctx.strokeStyle = 'rgba(156,61,36,' + alpha.toFixed(3) + ')';
       ctx.beginPath();
       ctx.moveTo(p1.x, p1.y);
       ctx.lineTo(p2.x, p2.y);
@@ -111,7 +111,7 @@ function initHeroGlobe(hero) {
     for (var n = 0; n < POINTS; n++) {
       var q = proj[n];
       var a2 = 0.25 + ((q.z + 1) / 2) * 0.6;
-      ctx.fillStyle = (n % 9 === 0) ? 'rgba(168,134,74,' + a2.toFixed(3) + ')' : 'rgba(201,162,74,' + a2.toFixed(3) + ')';
+      ctx.fillStyle = (n % 9 === 0) ? 'rgba(61,58,52,' + a2.toFixed(3) + ')' : 'rgba(156,61,36,' + a2.toFixed(3) + ')';
       ctx.beginPath();
       ctx.arc(q.x, q.y, 1.6 * q.s, 0, Math.PI * 2);
       ctx.fill();
@@ -120,7 +120,7 @@ function initHeroGlobe(hero) {
     // Orbit ring (a great circle tilted differently from the globe)
     var ringTilt = rx + 0.9;
     var cT = Math.cos(ringTilt), sT = Math.sin(ringTilt);
-    ctx.strokeStyle = 'rgba(168,134,74,0.35)';
+    ctx.strokeStyle = 'rgba(61,58,52,0.35)';
     ctx.lineWidth = 1.2;
     ctx.beginPath();
     for (var k = 0; k <= RING_STEPS; k++) {
