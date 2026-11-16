@@ -100,7 +100,7 @@ function initHeroGlobe(hero) {
       var p1 = proj[edges[e][0]], p2 = proj[edges[e][1]];
       var depth = (p1.z + p2.z) / 2;
       var alpha = 0.06 + ((depth + 1) / 2) * 0.22;
-      ctx.strokeStyle = 'rgba(156,61,36,' + alpha.toFixed(3) + ')';
+      ctx.strokeStyle = 'rgba(0,212,255,' + alpha.toFixed(3) + ')';
       ctx.beginPath();
       ctx.moveTo(p1.x, p1.y);
       ctx.lineTo(p2.x, p2.y);
@@ -111,7 +111,7 @@ function initHeroGlobe(hero) {
     for (var n = 0; n < POINTS; n++) {
       var q = proj[n];
       var a2 = 0.25 + ((q.z + 1) / 2) * 0.6;
-      ctx.fillStyle = (n % 9 === 0) ? 'rgba(61,58,52,' + a2.toFixed(3) + ')' : 'rgba(156,61,36,' + a2.toFixed(3) + ')';
+      ctx.fillStyle = (n % 9 === 0) ? 'rgba(99,102,241,' + a2.toFixed(3) + ')' : 'rgba(0,212,255,' + a2.toFixed(3) + ')';
       ctx.beginPath();
       ctx.arc(q.x, q.y, 1.6 * q.s, 0, Math.PI * 2);
       ctx.fill();
@@ -120,7 +120,7 @@ function initHeroGlobe(hero) {
     // Orbit ring (a great circle tilted differently from the globe)
     var ringTilt = rx + 0.9;
     var cT = Math.cos(ringTilt), sT = Math.sin(ringTilt);
-    ctx.strokeStyle = 'rgba(61,58,52,0.35)';
+    ctx.strokeStyle = 'rgba(99,102,241,0.35)';
     ctx.lineWidth = 1.2;
     ctx.beginPath();
     for (var k = 0; k <= RING_STEPS; k++) {
@@ -173,3 +173,98 @@ document.querySelectorAll('.hero, .page-hero').forEach(initHeroGlobe);
     });
   });
 })();
+
+
+// ── 3. Interactive layer ──
+var finePointer = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
+
+// 3a. Cursor spotlight on cards and buttons (sets --mx / --my per element)
+(function initSpotlight() {
+  if (reduceMotion) return;
+  document.querySelectorAll('.project-card, .skill-badge, .btn, .mini-card, .hero-stats > div').forEach(function (el) {
+    el.classList.add('spotlight');
+    el.addEventListener('pointermove', function (e) {
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  });
+})();
+
+// 3b. Magnetic buttons: they lean toward the cursor
+(function initMagnetic() {
+  if (reduceMotion || !finePointer) return;
+  document.querySelectorAll('.btn').forEach(function (btn) {
+    btn.addEventListener('pointermove', function (e) {
+      var r = btn.getBoundingClientRect();
+      var x = (e.clientX - (r.left + r.width / 2)) * 0.18;
+      var y = (e.clientY - (r.top + r.height / 2)) * 0.25;
+      btn.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)';
+    });
+    btn.addEventListener('pointerleave', function () { btn.style.transform = ''; });
+  });
+})();
+
+// 3c. Scroll parallax: hero photo and project images drift at different speeds
+(function initParallax() {
+  if (reduceMotion) return;
+  var layers = [];
+  document.querySelectorAll('.hero-photo-ring').forEach(function (el) { layers.push({ el: el, speed: -0.08 }); });
+  document.querySelectorAll('.project-img').forEach(function (el) { layers.push({ el: el, speed: 0.04 }); });
+  if (!layers.length) return;
+  var ticking = false;
+  function update() {
+    var y = window.scrollY;
+    layers.forEach(function (l) {
+      var rect = l.el.getBoundingClientRect();
+      var center = rect.top + rect.height / 2 - window.innerHeight / 2;
+      l.el.style.setProperty('--parallax', (center * l.speed).toFixed(1) + 'px');
+    });
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  update();
+})();
+
+// 3d. Custom cursor (desktop only)
+(function initCursor() {
+  if (reduceMotion || !finePointer) return;
+  document.body.classList.add('has-custom-cursor');
+  var dot = document.createElement('div');
+  dot.className = 'cursor-dot';
+  var ring = document.createElement('div');
+  ring.className = 'cursor-ring';
+  document.body.appendChild(ring);
+  document.body.appendChild(dot);
+  var x = 0, y = 0, rx = 0, ry = 0;
+  window.addEventListener('pointermove', function (e) {
+    x = e.clientX; y = e.clientY;
+    dot.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+  });
+  function follow() {
+    rx += (x - rx) * 0.18;
+    ry += (y - ry) * 0.18;
+    ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px)';
+    requestAnimationFrame(follow);
+  }
+  follow();
+  document.querySelectorAll('a, button, .project-card, .btn').forEach(function (el) {
+    el.addEventListener('pointerenter', function () { ring.classList.add('is-hover'); });
+    el.addEventListener('pointerleave', function () { ring.classList.remove('is-hover'); });
+  });
+})();
+
+// 3e. Click anywhere on a hero: the globe sends out a pulse
+window.addEventListener('pointerdown', function (e) {
+  var hero = e.target.closest && e.target.closest('.hero, .page-hero');
+  if (!hero || reduceMotion) return;
+  var r = hero.getBoundingClientRect();
+  var pulse = document.createElement('span');
+  pulse.className = 'hero-pulse';
+  pulse.style.left = (e.clientX - r.left) + 'px';
+  pulse.style.top = (e.clientY - r.top) + 'px';
+  hero.appendChild(pulse);
+  pulse.addEventListener('animationend', function () { pulse.remove(); });
+});
