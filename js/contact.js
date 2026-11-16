@@ -181,6 +181,15 @@ function initRealTimeValidation() {
     if (!input) return;
 
     input.addEventListener('input', function() {
+      // Once a field is showing an error, re-check it on every keystroke so the
+      // error clears as soon as the value is valid. Clearing it only on blur moved
+      // the Send button just as it was being clicked, and the click was lost.
+      var errorEl = document.getElementById(field.errorId);
+      if (errorEl && errorEl.classList.contains('visible')) {
+        validateField(field.id, field.errorId);
+        return;
+      }
+
       // Only validate if field has been touched
       var value = input.value;
       if (!value) {
@@ -256,27 +265,20 @@ function validateField(inputId, errorId) {
 
     if (!validateContactForm()) return;
 
-    // Simulate sending (loading state)
-    var submitBtn = document.getElementById('submitContactBtn');
-    submitBtn.disabled  = true;
-    submitBtn.innerHTML = `
-      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="animation:spin 1s linear infinite;">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-      </svg>
-      Sending...
-    `;
+    // Open the visitor's email app with the message filled in.
+    // There is no server behind this form, so the email app does the sending.
+    var name    = document.getElementById('contactName').value.trim();
+    var email   = document.getElementById('contactEmail').value.trim();
+    var phone   = document.getElementById('contactPhone').value.trim();
+    var subject = document.getElementById('contactSubject').value.trim();
+    var message = document.getElementById('contactMessage').value.trim();
 
-    // Simulate network delay then show success
-    setTimeout(function() {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = `
-        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-        </svg>
-        Send Message
-      `;
-      showFormSuccess();
-    }, 1500);
+    var body = message + '\n\n' + name + '\n' + email + '\n' + phone;
+    window.location.href = 'mailto:abdulsamadtaiwo@miva.edu.ng' +
+      '?subject=' + encodeURIComponent(subject || ('Portfolio message from ' + name)) +
+      '&body=' + encodeURIComponent(body);
+
+    showFormSuccess();
   });
 
   // "Send Another" button

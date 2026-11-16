@@ -34,7 +34,7 @@ A scrolling story in chapters, with a 3D scene behind it:
 
 ### 4. ✉️ Contact (`contact.html`)
 - Contact form with client-side JavaScript validation (empty checks, email format, digits-only phone numbers).
-- Simulated form submission with a success state. The form does not send a real message.
+- Sending opens the visitor's email app with the message filled in, so no server is needed.
 
 ---
 
@@ -44,7 +44,8 @@ All of these are written from scratch, with no external libraries.
 
 - **3D particle scene (`js/story.js`):** drawn on a `<canvas>` with hand-written 3D projection. It morphs between a globe, helix, lattice, wave, ring and spiral galaxy as you scroll through the homepage chapters, and turns with the pointer.
 - **3D project frames:** homepage screenshots rotate in 3D as they scroll through the viewport.
-- **3D globe, card tilt and cursor effects (`js/three-d.js`):** used on the other pages.
+- **Inner pages:** About, Projects and Contact run the same scene behind their content, each with its own shapes.
+- **Card tilt and cursor effects (`js/three-d.js`):** project cards lean toward the pointer, with a cursor spotlight and magnetic buttons on desktop.
 - **Scroll progress bar and chapter indicator** on the homepage.
 - **Motion preferences:** the scene and animations are turned off for visitors who prefer reduced motion.
 

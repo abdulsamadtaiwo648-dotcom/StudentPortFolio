@@ -7,7 +7,7 @@
   <meta name="description" content="Portfolio projects by Abdulsamad Taiwo – DLNZ Store, CLI Tower Management System, and ASCII Art Web." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="story story--page">
 
   <!-- ===== NAVIGATION ===== -->
   <nav class="navbar" id="navbar">
@@ -28,7 +28,7 @@
   <div class="page-content">
 
     <!-- ===== PAGE HERO ===== -->
-    <section class="page-hero">
+    <section class="page-hero" id="top" data-chapter="Intro" data-shape="cube" data-anchor="0.5" data-alpha="0.6">
       <div class="container">
         <span class="tag page-hero-tag">Portfolio</span>
         <h1>My <span style="color:var(--accent)">Projects</span></h1>
@@ -37,7 +37,7 @@
     </section>
 
     <!-- ===== PROJECTS SECTION ===== -->
-    <section class="section">
+    <section class="section" id="content" data-chapter="Details" data-shape="wave" data-anchor="0.5" data-alpha="0.22">
       <div class="container">
 
         <!-- Project Filter Buttons -->
@@ -128,7 +128,7 @@
             </div>
           </article>
 
-          <!-- Project 4: SoloBiz -->
+          <!-- Project 3: SoloBiz -->
           <article class="project-card fade-in-on-scroll" data-category="web" id="project-solobiz">
             <img src="assets/images/solobiz.png" alt="SoloBiz – landing page screenshot" class="project-img" />
             <div class="project-body">
@@ -150,6 +150,38 @@
               </ul>
               <div class="project-links">
                 <a href="https://solobiz.onrender.com" target="_blank" rel="noopener" class="project-link" id="solobiz-live-link">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Live Website
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Digital Waste Management -->
+          <article class="project-card fade-in-on-scroll" data-category="web" id="project-digitalwaste">
+            <img src="assets/images/digital-waste.png" alt="Digital Waste Management Platform – home page screenshot" class="project-img" />
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Full Stack</span>
+                <span class="tag purple">Go / React</span>
+                <span class="tag">IoT</span>
+              </div>
+              <h2 class="project-title">Digital Waste Management Platform</h2>
+              <p class="project-desc">
+                A waste management platform with a Go REST API, PostgreSQL, React web apps and an
+                Expo mobile app. Residents register, report issues and pay bills, while staff
+                handle complaints and devices. A Python service calculates bin fill levels from
+                IoT sensor readings.
+              </p>
+              <ul style="color:var(--text-muted); font-size:0.82rem; margin-bottom:16px; padding-left:16px; line-height:1.9;">
+                <li>Three isolated Go APIs: resident, management and admin</li>
+                <li>IoT bin fill calculation via a Python service</li>
+                <li>Resident mobile app built with Expo and React Native</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://digital-waste-management.onrender.com" target="_blank" rel="noopener" class="project-link" id="digitalwaste-live-link">
                   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -182,38 +214,6 @@
                 <span class="project-link" style="color:var(--text-muted); cursor:default;">
                   Desktop app – no website
                 </span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 6: Digital Waste Management -->
-          <article class="project-card fade-in-on-scroll" data-category="web" id="project-digitalwaste">
-            <img src="assets/images/digital-waste.png" alt="Digital Waste Management Platform – home page screenshot" class="project-img" />
-            <div class="project-body">
-              <div class="project-tags">
-                <span class="tag">Full Stack</span>
-                <span class="tag purple">Go / React</span>
-                <span class="tag">IoT</span>
-              </div>
-              <h2 class="project-title">Digital Waste Management Platform</h2>
-              <p class="project-desc">
-                A waste management platform with a Go REST API, PostgreSQL, React web apps and an
-                Expo mobile app. Residents register, report issues and pay bills, while staff
-                handle complaints and devices. A Python service calculates bin fill levels from
-                IoT sensor readings.
-              </p>
-              <ul style="color:var(--text-muted); font-size:0.82rem; margin-bottom:16px; padding-left:16px; line-height:1.9;">
-                <li>Three isolated Go APIs: resident, management and admin</li>
-                <li>IoT bin fill calculation via a Python service</li>
-                <li>Resident mobile app built with Expo and React Native</li>
-              </ul>
-              <div class="project-links">
-                <a href="https://digital-waste-management.onrender.com" target="_blank" rel="noopener" class="project-link" id="digitalwaste-live-link">
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                  Live Website
-                </a>
               </div>
             </div>
           </article>
@@ -254,6 +254,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/three-d.js"></script>
+  <script src="js/story.js"></script>
   <script>
     // Project filtering using arrays and functions
     const filterBtns = document.querySelectorAll('#projectFilters .filter-btn');

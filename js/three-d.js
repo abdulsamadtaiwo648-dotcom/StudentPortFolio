@@ -149,7 +149,10 @@ function initHeroGlobe(hero) {
   requestAnimationFrame(draw);
 }
 
-document.querySelectorAll('.hero, .page-hero').forEach(initHeroGlobe);
+// Pages that run the full-screen scene (js/story.js) mark their banner with data-chapter
+document.querySelectorAll('.hero, .page-hero').forEach(function (el) {
+  if (!el.hasAttribute('data-chapter')) initHeroGlobe(el);
+});
 
 
 // ── 2. 3D tilt on project cards ──

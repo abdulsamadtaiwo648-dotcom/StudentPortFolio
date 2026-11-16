@@ -7,7 +7,7 @@
   <meta name="description" content="Get in touch with Abdulsamad Taiwo – Software Engineering student and aspiring backend developer." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="story story--page">
 
   <!-- ===== NAVIGATION ===== -->
   <nav class="navbar" id="navbar">
@@ -28,7 +28,7 @@
   <div class="page-content">
 
     <!-- ===== PAGE HERO ===== -->
-    <section class="page-hero">
+    <section class="page-hero" id="top" data-chapter="Intro" data-shape="torus" data-anchor="0.5" data-alpha="0.6">
       <div class="container">
         <span class="tag page-hero-tag">Get In Touch</span>
         <h1>Contact <span style="color:var(--accent)">Me</span></h1>
@@ -37,7 +37,7 @@
     </section>
 
     <!-- ===== CONTACT SECTION ===== -->
-    <section class="section">
+    <section class="section" id="content" data-chapter="Details" data-shape="galaxy" data-anchor="0.5" data-alpha="0.22">
       <div class="container">
         <div class="contact-layout">
 
@@ -99,9 +99,9 @@
 
             <!-- Success Message (hidden until form submitted) -->
             <div class="form-success" id="formSuccess">
-              <div class="icon">✅</div>
-              <h4>Message Sent!</h4>
-              <p>Thanks for reaching out, Abdulsamad will get back to you shortly.</p>
+              <div class="icon">✉️</div>
+              <h4>Almost done</h4>
+              <p>Your email app should now be open with your message ready. Press send there to deliver it.</p>
               <button class="btn btn-outline" id="sendAnotherBtn" style="margin-top:20px;">Send Another</button>
             </div>
 
@@ -197,6 +197,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/three-d.js"></script>
+  <script src="js/story.js"></script>
   <script src="js/contact.js"></script>
 </body>
 </html>

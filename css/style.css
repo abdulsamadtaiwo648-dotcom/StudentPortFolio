@@ -29,7 +29,7 @@
   /* Text Colours */
   --text-primary:   #f1f5f9;
   --text-secondary: #94a3b8;
-  --text-muted:     #475569;
+  --text-muted:     #7b889b;
 
   /* Border */
   --border:         rgba(255,255,255,0.08);
@@ -1913,3 +1913,27 @@ h1, h2, h3, .section-title, .page-hero h1, .hero-name {
   .scroll-cue::after { animation: none; }
   .portrait, .work-frame { transform: none; transition: none; }
 }
+
+
+/* ===================================================
+   SITE-WIDE POLISH
+   =================================================== */
+
+/* Inner pages share the homepage's 3D scene and type */
+.story--page .story-nav { display: none; }
+.story .page-hero { background: transparent; }
+.page-hero h1,
+.section-title { font-weight: 600; letter-spacing: 0; }
+.page-hero-tag {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font-size: 0.76rem;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+/* Dark audio controls to match the page */
+audio { color-scheme: dark; }

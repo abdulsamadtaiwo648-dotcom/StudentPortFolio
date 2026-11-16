@@ -7,7 +7,7 @@
   <meta name="description" content="Learn about Abdulsamad Taiwo's educational background, career aspirations, technical skills, and hobbies." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="story story--page">
 
   <!-- ===== NAVIGATION ===== -->
   <nav class="navbar" id="navbar">
@@ -28,7 +28,7 @@
   <div class="page-content">
 
     <!-- ===== PAGE HERO ===== -->
-    <section class="page-hero">
+    <section class="page-hero" id="top" data-chapter="Intro" data-shape="sphere" data-anchor="0.5" data-alpha="0.6">
       <div class="container">
         <span class="tag page-hero-tag">About Me</span>
         <h1>The Person <span style="color:var(--accent)">Behind the Code</span></h1>
@@ -37,7 +37,7 @@
     </section>
 
     <!-- ===== MAIN ABOUT CONTENT ===== -->
-    <section class="section">
+    <section class="section" id="content" data-chapter="Details" data-shape="helix" data-anchor="0.5" data-alpha="0.22">
       <div class="container">
         <div class="about-grid">
 
@@ -204,6 +204,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/three-d.js"></script>
+  <script src="js/story.js"></script>
   <script>
     // Skills data array – rendered dynamically
     const skills = [
