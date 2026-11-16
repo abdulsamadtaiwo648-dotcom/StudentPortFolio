@@ -1,223 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Abdulsamad Taiwo</title>
-  <meta name="description" content="Portfolio of Abdulsamad Taiwo, a Software Engineering student at MIVA Open University and aspiring backend developer.">
-
-  <!--
-    Layout based on "vCard - Personal portfolio" by codewithsadee (MIT License).
-    https://github.com/codewithsadee/vcard-personal-portfolio
-    See THIRD_PARTY_LICENSES.md. Content, 3D scene and customisations by Abdulsamad Taiwo.
-  -->
-  <link rel="stylesheet" href="css/vcard.css">
-  <link rel="stylesheet" href="css/custom.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdulsamad Taiwo | Software Engineering Student</title>
+  <meta name="description" content="Personal academic portfolio of Abdulsamad Taiwo – Software Engineering student at MIVA Open University, aspiring backend developer." />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+<body class="story">
 
-<body data-shape="sphere">
-
-  <main>
-
-    <!-- Sidebar: profile and contact details -->
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="assets/images/profile.jpg" alt="Abdulsamad Taiwo" width="80" height="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Abdulsamad Taiwo">Abdulsamad Taiwo</h1>
-
-          <p class="title">Software Engineering Student</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn aria-expanded="false" aria-label="Show contacts">
-          <span>Show Contacts</span>
-
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">AT<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-hamburger" id="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
+        <span></span><span></span><span></span>
       </div>
+    </div>
+  </nav>
 
-      <div class="sidebar-info_more">
+  <main class="page-content">
 
-        <div class="separator"></div>
+    <!-- ===== CHAPTER 00: HERO ===== -->
+    <section class="s-hero" id="top" data-chapter="Intro" data-shape="sphere" data-anchor="0.74" data-alpha="1">
+      <div class="container">
+        <span class="s-eyebrow">Software Engineering Student</span>
 
-        <ul class="contacts-list">
+        <h1 class="s-name">
+          <span class="line" data-split>Abdulsamad</span>
+          <span class="line line--outline" data-split data-split-offset="6">Taiwo</span>
+        </h1>
 
-          <li class="contact-item">
-            <div class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a href="mailto:abdulsamadtaiwo@miva.edu.ng" class="contact-link">abdulsamadtaiwo@miva.edu.ng</a>
-            </div>
-          </li>
-
-          <li class="contact-item">
-            <div class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></div>
-            <div class="contact-info">
-              <p class="contact-title">University</p>
-              <p class="contact-link">MIVA Open University</p>
-            </div>
-          </li>
-
-          <li class="contact-item">
-            <div class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>Nigeria</address>
-            </div>
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="https://github.com/abdulsamadtaiwo648-dotcom" class="social-link" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 6l-6 6 6 6"/><path d="M16 6l6 6-6 6"/></svg></a>
-          </li>
-          <li class="social-item">
-            <a href="mailto:abdulsamadtaiwo@miva.edu.ng" class="social-link" aria-label="Send an email"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
-          </li>
-        </ul>
-
-      </div>
-
-    </aside>
-
-    <div class="main-content">
-
-      <nav class="navbar" aria-label="Main">
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <a class="navbar-link active" aria-current="page" href="index.html" data-shape-link="sphere">About</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="resume.html" data-shape-link="helix">Resume</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="projects.html" data-shape-link="cube">Projects</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="contact.html" data-shape-link="torus">Contact</a>
-          </li>
-        </ul>
-      </nav>
-
-      <article class="about active">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm Abdulsamad Taiwo, a Software Engineering student at MIVA Open University in Nigeria.
-            My passion lies in backend development: crafting APIs, building systems that scale, and
-            writing clean, efficient code. I work primarily with Golang and C#, and I enjoy solving
-            real-world problems with technology.
+        <div class="s-hero-foot">
+          <p class="hero-role">
+            Aspiring <span id="typewriter"></span><span class="cursor"></span>
           </p>
 
-          <p>
-            My career goal is to become a skilled Backend Engineer, building robust, scalable
-            server-side systems and APIs that power modern applications. Long-term, I aspire to
-            become a software architect who designs solutions at scale.
+          <p class="s-bio">
+            I study software engineering at MIVA Open University and build
+            backend systems: APIs, services and tools that are meant to scale.
+            Always learning, always building.
           </p>
 
-          <p>
-            When I'm not coding, you'll find me watching movies, reading, or on the football field.
-          </p>
-        </section>
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What I'm doing</h3>
-
-          <ul class="service-list">
-            <li class="service-item">
-              <div class="service-icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01"/><path d="M7 16.5h.01"/></svg></div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Backend development</h4>
-                <p class="service-item-text">Server-side systems built with Golang and C#, designed to be reliable and to scale.</p>
-              </div>
-            </li>
-            <li class="service-item">
-              <div class="service-icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></svg></div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">REST APIs</h4>
-                <p class="service-item-text">Designing and building APIs that power web and mobile applications.</p>
-              </div>
-            </li>
-            <li class="service-item">
-              <div class="service-icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3"/><path d="M13 15h4"/></svg></div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">CLI and systems tools</h4>
-                <p class="service-item-text">Command-line applications with structured data handling and clean architecture.</p>
-              </div>
-            </li>
-            <li class="service-item">
-              <div class="service-icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c3 3.2 3 14.8 0 18"/><path d="M12 3c-3 3.2-3 14.8 0 18"/></svg></div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-                <p class="service-item-text">Responsive websites and web apps with HTML, CSS, JavaScript and Python.</p>
-              </div>
-            </li>
-          </ul>
-
-        </section>
-
-        <section class="voice">
-
-          <h3 class="h3 service-title">Voice introduction</h3>
-
-          <div class="content-card voice-card">
-            <p>A short introduction, in my own voice.</p>
-            <audio controls id="coder-audio">
-              <source src="assets/audio/my-voice.m4a" type="audio/mp4">
-              Your browser does not support the audio element.
-            </audio>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary" id="view-projects-btn">See My Work &darr;</a>
+            <a href="contact.html" class="btn btn-outline" id="contact-btn">Contact Me</a>
           </div>
 
-        </section>
+          <div class="hero-stats">
+            <div>
+              <span class="hero-stat-num">5</span>
+              <span class="hero-stat-label">Projects</span>
+            </div>
+            <div>
+              <span class="hero-stat-num">4</span>
+              <span class="hero-stat-label">Languages</span>
+            </div>
+            <div>
+              <span class="hero-stat-num">100%</span>
+              <span class="hero-stat-label">Committed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="scroll-cue" aria-hidden="true">Scroll</span>
+    </section>
 
-        <section class="interests">
-
-          <h3 class="h3 interests-title">Interests</h3>
-
-          <ul class="interest-list">
-            <li>Movies</li>
-            <li>Reading</li>
-            <li>Football</li>
-            <li>Coding</li>
-            <li>Music</li>
-            <li>Tech trends</li>
-          </ul>
-
-        </section>
-
-      </article>
-
-      <p class="site-credit">
-        &copy; 2025 Abdulsamad Taiwo. COS 106 Term Project.
-        Layout based on <a href="https://github.com/codewithsadee/vcard-personal-portfolio" target="_blank" rel="noopener">vCard by codewithsadee</a> (MIT).
-      </p>
-
+    <!-- ===== SKILLS MARQUEE ===== -->
+    <div class="marquee" aria-label="Skills: Golang, C#, Python, HTML and CSS, REST APIs, CLI tools, Git and GitHub, backend development">
+      <div class="marquee-track" aria-hidden="true">
+        <span>Golang</span><b>✦</b><span class="fill">C#</span><b>✦</b><span>Python</span><b>✦</b><span class="fill">HTML / CSS</span><b>✦</b><span>REST APIs</span><b>✦</b><span class="fill">CLI Tools</span><b>✦</b><span>Git &amp; GitHub</span><b>✦</b><span class="fill">Backend</span><b>✦</b>
+        <span>Golang</span><b>✦</b><span class="fill">C#</span><b>✦</b><span>Python</span><b>✦</b><span class="fill">HTML / CSS</span><b>✦</b><span>REST APIs</span><b>✦</b><span class="fill">CLI Tools</span><b>✦</b><span>Git &amp; GitHub</span><b>✦</b><span class="fill">Backend</span><b>✦</b>
+      </div>
     </div>
+
+    <!-- ===== CHAPTER 01: ABOUT ===== -->
+    <section class="chapter" id="about" data-chapter="About" data-shape="helix" data-anchor="0.5" data-alpha="0.5">
+      <div class="container about-split">
+        <div class="portrait-wrap fade-in-on-scroll">
+          <div class="portrait" id="portrait">
+            <img src="assets/images/profile.jpg" alt="Abdulsamad Taiwo" id="hero-photo" />
+            <span class="portrait-tag">MIVA Open University</span>
+          </div>
+        </div>
+
+        <div class="fade-in-on-scroll">
+          <div class="chapter-label">01 — About</div>
+          <h2 class="chapter-title">Aspiring <em>backend</em> developer.</h2>
+          <p class="lead">
+            I'm Abdulsamad Taiwo, a Software Engineering student at MIVA Open University.
+            My passion lies in backend development: crafting APIs, building systems that
+            scale, and writing clean, efficient code. I work primarily with
+            <strong>Golang</strong> and <strong>C#</strong>, and I enjoy solving
+            real-world problems with technology.
+          </p>
+          <p class="lead lead--muted">
+            When I'm not coding, you'll find me watching movies, reading, or on the football field.
+          </p>
+          <a href="about.html" class="btn btn-outline" id="learn-more-btn">More About Me &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CHAPTER 02: STACK ===== -->
+    <section class="chapter" id="stack" data-chapter="Stack" data-shape="cube" data-anchor="0.74" data-alpha="0.5">
+      <div class="container">
+        <div class="fade-in-on-scroll">
+          <div class="chapter-label">02 — Stack</div>
+          <h2 class="chapter-title">Tools I work <em>with</em>.</h2>
+        </div>
+
+        <dl class="stack-list fade-in-on-scroll">
+          <div class="stack-row">
+            <dt>Languages</dt>
+            <dd><span>Golang</span><span>C#</span><span>Python</span><span>HTML / CSS</span></dd>
+          </div>
+          <div class="stack-row">
+            <dt>Backend</dt>
+            <dd><span>REST APIs</span><span>Backend development</span></dd>
+          </div>
+          <div class="stack-row">
+            <dt>Tooling</dt>
+            <dd><span>CLI tools</span><span>Git &amp; GitHub</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== CHAPTER 03: SELECTED WORK ===== -->
+    <section class="chapter" id="work" data-chapter="Work" data-shape="wave" data-anchor="0.5" data-alpha="0.3">
+      <div class="container">
+        <div class="fade-in-on-scroll work-head">
+          <div class="chapter-label">03 — Selected work</div>
+          <h2 class="chapter-title">Things I've <em>built</em>.</h2>
+        </div>
+
+        <article class="work-row" id="featured-dlnz">
+          <div class="work-media">
+            <a class="work-frame" data-dir="1" href="https://dlnz-store.vercel.app" target="_blank" rel="noopener" aria-label="Open DLNZ Store live site">
+              <div class="work-chrome"><i></i><i></i><i></i><span>dlnz-store.vercel.app</span></div>
+              <img src="assets/images/dlnz-store.png" alt="DLNZ Store screenshot" />
+            </a>
+          </div>
+          <div class="work-info fade-in-on-scroll">
+            <span class="work-index" aria-hidden="true">01</span>
+            <div class="project-tags">
+              <span class="tag">E-Commerce</span>
+              <span class="tag purple">Web</span>
+            </div>
+            <h3 class="work-title">DLNZ Store</h3>
+            <p>A full-featured clothing brand e-commerce website with product listings, shopping cart, and checkout flow.</p>
+            <a class="work-link" href="https://dlnz-store.vercel.app" target="_blank" rel="noopener">Visit live site <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="work-row" id="featured-solobiz">
+          <div class="work-media">
+            <a class="work-frame" data-dir="-1" href="https://solobiz.onrender.com" target="_blank" rel="noopener" aria-label="Open SoloBiz live site">
+              <div class="work-chrome"><i></i><i></i><i></i><span>solobiz.onrender.com</span></div>
+              <img src="assets/images/solobiz.png" alt="SoloBiz landing page screenshot" loading="lazy" />
+            </a>
+          </div>
+          <div class="work-info fade-in-on-scroll">
+            <span class="work-index" aria-hidden="true">02</span>
+            <div class="project-tags">
+              <span class="tag">Web App</span>
+              <span class="tag purple">Python / Flask</span>
+            </div>
+            <h3 class="work-title">SoloBiz</h3>
+            <p>Smart finance tools for independent vendors: expenses, inventory, sales and a public storefront.</p>
+            <a class="work-link" href="https://solobiz.onrender.com" target="_blank" rel="noopener">Visit live site <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="work-row" id="featured-digitalwaste">
+          <div class="work-media">
+            <a class="work-frame" data-dir="1" href="https://digital-waste-management.onrender.com" target="_blank" rel="noopener" aria-label="Open Digital Waste Management live site">
+              <div class="work-chrome"><i></i><i></i><i></i><span>digital-waste-management.onrender.com</span></div>
+              <img src="assets/images/digital-waste.png" alt="Digital Waste Management Platform home page screenshot" loading="lazy" />
+            </a>
+          </div>
+          <div class="work-info fade-in-on-scroll">
+            <span class="work-index" aria-hidden="true">03</span>
+            <div class="project-tags">
+              <span class="tag">Full Stack</span>
+              <span class="tag purple">Go / React</span>
+            </div>
+            <h3 class="work-title">Digital Waste Management</h3>
+            <p>A waste platform with resident reporting, payments, staff workflows and IoT bin monitoring.</p>
+            <a class="work-link" href="https://digital-waste-management.onrender.com" target="_blank" rel="noopener">Visit live site <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <div class="work-more fade-in-on-scroll">
+          <a href="projects.html" class="btn btn-outline" id="all-projects-btn">View All Projects &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CHAPTER 04: VOICE ===== -->
+    <section class="chapter" id="voice" data-chapter="Voice" data-shape="torus" data-anchor="0.5" data-alpha="0.45">
+      <div class="container">
+        <div class="fade-in-on-scroll voice-head">
+          <div class="chapter-label">04 — Voice</div>
+          <h2 class="chapter-title">Hear it <em>from me</em>.</h2>
+        </div>
+        <div class="voice-card fade-in-on-scroll">
+          <p>A short voice introduction, in my own words.</p>
+          <audio controls id="coder-audio">
+            <source src="assets/audio/my-voice.m4a" type="audio/mp4" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CHAPTER 05: CONTACT ===== -->
+    <section class="chapter cta" id="contact" data-chapter="Contact" data-shape="galaxy" data-anchor="0.5" data-alpha="0.7">
+      <div class="container fade-in-on-scroll">
+        <div class="chapter-label chapter-label--center">05 — Contact</div>
+        <h2 class="cta-title">Let's build<br><span class="outline">something.</span></h2>
+        <div class="hero-actions hero-actions--center">
+          <a href="contact.html" class="btn btn-primary" id="cta-contact-btn">Get In Touch &rarr;</a>
+          <a href="projects.html" class="btn btn-outline" id="cta-projects-btn">Browse Projects</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <script src="js/vcard.js"></script>
-  <script src="js/scene.js"></script>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">AT<span>.</span></div>
+      <p class="footer-text">Software Engineering Student @ MIVA Open University</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 <span>Abdulsamad Taiwo</span>. COS 106 Term Project.</p>
+    </div>
+  </footer>
 
+  <script src="js/main.js"></script>
+  <script src="js/three-d.js"></script>
+  <script src="js/story.js"></script>
 </body>
-
 </html>
