@@ -1649,7 +1649,7 @@ h1, h2, h3, .section-title, .page-hero h1, .hero-name {
 /* ---- Skills marquee ---- */
 .marquee {
   overflow: hidden;
-  padding: 14px 0;
+  padding: 11px 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: rgba(8, 12, 20, 0.6);
@@ -1664,16 +1664,17 @@ h1, h2, h3, .section-title, .page-hero h1, .hero-name {
 }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 .marquee-track span {
-  padding: 0 26px;
+  padding: 0 18px;
   white-space: nowrap;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(1.05rem, 2vw, 1.5rem);
-  font-weight: 600;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(241, 245, 249, 0.5);
+  font-family: var(--font-main);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
 }
-.marquee-track span.fill { color: var(--text-primary); -webkit-text-stroke: 0; }
-.marquee-track b { color: var(--accent); font-size: 1rem; font-weight: 400; }
+.marquee-track span.fill { color: var(--text-primary); }
+.marquee-track b { color: var(--accent); font-size: 0.6rem; font-weight: 400; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 /* ---- Chapters ---- */
