@@ -258,7 +258,7 @@ var finePointer = window.matchMedia && window.matchMedia('(pointer: fine)').matc
 
 // 3e. Click anywhere on a hero: the globe sends out a pulse
 window.addEventListener('pointerdown', function (e) {
-  var hero = e.target.closest && e.target.closest('.hero, .page-hero');
+  var hero = e.target.closest && e.target.closest('.hero, .page-hero, .s-hero');
   if (!hero || reduceMotion) return;
   var r = hero.getBoundingClientRect();
   var pulse = document.createElement('span');
