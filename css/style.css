@@ -4,7 +4,7 @@
    =================================================== */
 
 /* --- Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&family=Playfair+Display:wght@600;700;800&display=swap');
 
 /* ===================================================
    CSS CUSTOM PROPERTIES (Design Tokens)
@@ -1346,6 +1346,24 @@ input, textarea, select { font-family: var(--font-main); }
 
 @media (max-width: 900px) {
   .hero-3d-canvas { opacity: 0.3; }
+}
+
+/* Page heroes (About, Projects, Planner, Contact) get the same globe */
+.page-hero { position: relative; overflow: hidden; }
+.page-hero > :not(.hero-3d-canvas) { position: relative; z-index: 1; }
+.page-hero .hero-3d-canvas { opacity: 0.4; }
+
+/* Classic display type for headings, with a light 3D text depth */
+h1, h2, h3, .section-title, .page-hero h1, .hero-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.35), 0 10px 24px rgba(0,212,255,0.08);
+}
+
+/* Cards: layered 3D shadow for depth */
+.project-card,
+.skills-preview .skill-badge {
+  box-shadow: 0 18px 40px -12px rgba(0,0,0,0.6), 0 2px 0 rgba(255,255,255,0.03) inset;
 }
 
 /* Project cards: tilt in 3D on pointer movement */
