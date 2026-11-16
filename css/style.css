@@ -1483,3 +1483,27 @@ h1, h2, h3, .section-title, .page-hero h1, .hero-name {
 @media (pointer: coarse) {
   .cursor-dot, .cursor-ring { display: none; }
 }
+
+
+/* ===================================================
+   RESPONSIVE LAYOUT
+   =================================================== */
+.split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.mini-grid > div { min-width: 0; }
+
+@media (max-width: 900px) {
+  .split-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 480px) {
+  .mini-grid { gap: 12px; }
+  .mini-grid > div { padding: 18px !important; }
+}
+
+/* About: let grid items shrink and keep the photo and info rows inside the screen */
+.about-grid > * { min-width: 0; }
+.about-photo-card img { max-width: 100%; height: auto; display: block; }
+@media (max-width: 640px) {
+  .about-info-row { flex-wrap: wrap; gap: 4px 12px; }
+  .about-info-row .value { overflow-wrap: anywhere; text-align: right; }
+}
