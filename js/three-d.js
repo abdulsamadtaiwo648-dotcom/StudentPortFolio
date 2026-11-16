@@ -9,9 +9,8 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
 
 
 // ── 1. Rotating 3D wireframe globe (hero background) ──
-(function initHeroGlobe() {
-  var hero = document.querySelector('.hero');
-  if (!hero || reduceMotion || !window.HTMLCanvasElement) return;
+function initHeroGlobe(hero) {
+  if (reduceMotion || !window.HTMLCanvasElement) return;
 
   var canvas = document.createElement('canvas');
   canvas.className = 'hero-3d-canvas';
@@ -80,7 +79,8 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
 
     ctx.clearRect(0, 0, width, height);
 
-    var cx = width > 900 ? width * 0.72 : width * 0.5;
+    var centred = hero.classList.contains('page-hero') || width <= 900;
+    var cx = centred ? width * 0.5 : width * 0.72;
     var cy = height * 0.5;
     var radius = Math.min(width, height) * (width > 900 ? 0.34 : 0.28);
 
@@ -147,7 +147,9 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
   window.addEventListener('resize', resize);
   resize();
   requestAnimationFrame(draw);
-})();
+}
+
+document.querySelectorAll('.hero, .page-hero').forEach(initHeroGlobe);
 
 
 // ── 2. 3D tilt on project cards ──
